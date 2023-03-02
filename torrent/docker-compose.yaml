@@ -8,8 +8,8 @@ services:
       - traefik_proxy
       - default
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=789
+      - PGID=3501
       - TZ=Asia/Seoul
       - WEBUI_PORT=8080
     volumes:
