@@ -1,3 +1,9 @@
-media
-.env
-.docker
+*
+!bazarr/
+!jackett/
+!overseerr/
+!plex/
+!radarr/
+!sonarr/
+!torrent/
+

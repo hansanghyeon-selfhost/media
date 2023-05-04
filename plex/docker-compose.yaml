@@ -14,11 +14,11 @@ services:
       - TZ=Asia/Seoul
       - PLEX_CLAIM=$PLEX_CLAIM
       - ADVERTISE_IP=$ADVERTISE_IP
-      - PUID=0
-      - PGID=0
+      - PUID=$PUID
+      - PGID=$PGID
       - VERSION=latest
     # 생설될 컨테이너 이름
-    image: lscr.io/linuxserver/plex:latest
+    image: linuxserver/plex:latest
     # 컨테이너가 사용할 저장 장소
     volumes:
       - ../media:/data
@@ -39,7 +39,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.plex.entrypoints=https
-      - traefik.http.routers.plex.rule=Host(`plex.hyeon.pro`)
+      - traefik.http.routers.plex.rule=Host(`media.hyeon.pro`)
       - traefik.http.routers.plex.tls.certresolver=leresolver
       - traefik.http.services.plex.loadbalancer.server.port=32400
 
